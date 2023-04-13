@@ -1,0 +1,37 @@
+pip install -r requirements.txt
+pip freeze > requirements.txt
+
+django-admin startproject staff
+python manage.py startapp catalog
+
+ORM
+python manage.py makemigrations
+python manage.py migrate
+
+
+staff - папка проекта
+- staff - файлы управления проектом
+  - settings.py - все настройки проекта
+  - urls.py - маршрутизатор (URL-браузера) - отправяет данные из браузера в какой-то python-скрипт
+- manage.py - файл исполнения проекта
+- catalog (app - приложение)
+  - views.py - логика приложения
+  - urls.py - локальный маршрутизатор
+  - models.py - управление СУБД
+  - apps.py - служебная информация о приложении
+  - admin.py - панель администратора
+  - tests.py - тесты
+
+
+python manage.py runserver
+
+
+СТРУКТУРА ПРОЕКТА (MVC -> MTV)
+- ПРОЕКТ
+-- ПРИЛОЖЕНИЯ
+
+Работа над проектом:
+- создаем модель
+- создаем путь/маршрут на view
+- создаем view
+- создаем html-шаблон
